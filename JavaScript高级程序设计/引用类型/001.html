@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XKWeb</title>
+    <script src=""></script>
+
+    <style type="text/css">
+
+    </style>
+
+    <script>
+        function displayInfo(args) {
+            var output = "";
+            if (typeof args.name == "string") {
+                output += "Name: " + args.name + "\n";
+            }
+            if (typeof args.age == "number") {
+                output += "Ages: " + args.age + "\n";
+            }
+            console.log(output);
+        }
+        displayInfo({
+            "name": "晓锟",
+            "age": 22
+        });
+        displayInfo({
+            "age": 28
+        })
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
