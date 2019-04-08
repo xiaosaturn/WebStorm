@@ -9,29 +9,41 @@
 
     </style>
 
-    <script>
-        function displayInfo(args) {
-            var output = "";
-            if (typeof args.name == "string") {
-                output += "Name: " + args.name + "\n";
-            }
-            if (typeof args.age == "number") {
-                output += "Ages: " + args.age + "\n";
-            }
-            console.log(output);
-        }
-        displayInfo({
-            "name": "晓锟",
-            "age": 22
-        });
-        displayInfo({
-            "age": 28
-        })
-    </script>
+
 </head>
 
 <body>
+<script>
+    function displayInfo(args) {
+        var output = "";
+        if (typeof args.name == "string") {
+            output += "Name: " + args.name + "\n";
+        }
+        if (typeof args.age == "number") {
+            output += "Ages: " + args.age + "\n";
+        }
+        console.log(output);
+    }
+    displayInfo({
+        "name": "晓锟",
+        "age": 22
+    });
+    displayInfo({
+        "age": 28
+    });
+    console.log("================================");
+</script>
+<script>
+    var colors = ["red", "green", "blue"];
+    console.log(colors.toString());
+    console.log(colors.values());
+    console.log(colors);
+    console.log(colors.join(","));
+    console.log(colors.join("||"));
 
+    console.log(colors.push("yellow"));
+    console.log(colors.pop());
+</script>
 </body>
 
 </html>
