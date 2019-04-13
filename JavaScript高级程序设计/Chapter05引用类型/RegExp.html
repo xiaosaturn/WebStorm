@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RegExp正则表达式</title>
+    <script>
+        //g:全局模式，i:不区分大小写模式，m:多行模式
+        var pattern1 = /at/g;//匹配字符串中所有的"at"实例
+        var pattern2 = /[bc]at/i;//匹配第一个“bat”或“cat”，不区分大小写
+        var pattern3 = /.at/gi;//匹配所有以“at”结尾的3个字符的组合，不区分大小写
+        var pattern4 = /\[bc\]at/i;//匹配第一个"[bc]at"，不区分大小写
+        var pattern5 = /\.at/gi;//匹配所有".at"，不区分大小写
+        var pattern6 = new RegExp("[bc]at", "i");//与pattern2一样，只不过是使用构造函数创建的
+
+        //正则表达式字面量共享同一个RegExp实例，构造函数RegExp实例都是一个新的实例
+        var re = null,i;
+        for (i=0;i<10;i++) {
+            re = /cat/g;
+            var isMatch = re.test("catastrophe");
+            console.log(isMatch);
+        }
+        for (i=0;i<10;i++) {
+            re = new RegExp("cat", "g");
+            var isMatch = re.test("catastrophe");
+            console.log(isMatch);
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
