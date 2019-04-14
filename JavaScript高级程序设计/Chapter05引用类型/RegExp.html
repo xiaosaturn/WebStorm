@@ -25,6 +25,22 @@
             console.log(isMatch);
         }
 
+        //实例方法
+        var text = "mom and dad and baby";
+        var pattern7 = /mom( and dad( and baby)?)?/gi;
+        var matches = pattern7.exec(text);
+        console.log(matches.index, matches.input, matches[0], matches[1], matches[2]);
+
+        //构造函数属性
+        var text2 = "this has been a stort summer";
+        var pattern8 = /(.)hort/g;
+        if (pattern8.test(text2)) {
+            console.log(RegExp.input);
+            console.log(RegExp.leftContext);
+            console.log(RegExp.rightContext);
+            console.log(RegExp.lastMatch, RegExp.lastParen);
+            console.log(RegExp.multiline);
+        }
 
     </script>
 </head>
