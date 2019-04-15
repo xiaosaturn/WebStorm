@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本包装类型</title>
+    <script>
+        //Boolean/Number/String
+        var is = true;
+        var num = 15;
+        var str = "你好";
+        console.log(typeof is);//boolean
+        console.log(typeof num);//number
+        console.log(typeof str);//string
+
+        var is2 = new Boolean(true);
+        var num2 = new Number(12);
+        var str2 = new String("你好啊");
+        console.log(typeof is2);//object
+        console.log(typeof num2);//object
+        console.log(typeof str2);//object
+
+        /*
+        * 传字符串，得到String实例；
+        * 传布尔值，得到Boolean实例
+        * 传数字，得到Number实例
+        * */
+        var strObj = new Object("abc");//传不二
+        console.log(strObj instanceof String);//true
+
+        /*
+        * 使用new调用基本包装类型的构造函数和直接使用转型函数不一样
+        * */
+
+        var value = "25";
+        var number = Number(value); //转型函数
+        console.log(typeof number); //"number"
+        var obj = new Number(value); //构造函数
+        console.log(typeof obj); //"object"
+
+
+        /*
+        * Boolean
+        * */
+        var falseObj = new Boolean(false);
+        var result = falseObj && true;
+        console.log(result);//true
+        var falseValue = false;
+        result = falseValue && true;
+        console.log(result);//false
+        console.log(typeof falseObj);//object
+        console.log(typeof falseValue);//boolean
+        console.log(falseObj instanceof Boolean);//true
+        console.log(falseValue instanceof Boolean);//false
+
+
+        /*
+        * Number
+        * */
+        var numb = 10;
+        console.log(numb.toString());//10
+        console.log(numb.toString(2));//二进制1010
+        console.log(numb.toString(8));//八进制12
+        console.log(numb.toString(10));//十进制10
+        console.log(numb.toString(16));//十六进制a
+        console.log(numb.toFixed(2));//10.00
+        numb = 10.005;
+        console.log(numb.toFixed(2));//10.01，四舍五入
+        numb = 10;
+        console.log(numb.toExponential(1));//指数形式1.0e+1
+        numb = 99;
+        console.log(numb.toPrecision(1));//1e+2
+        console.log(numb.toPrecision(2));//99
+        console.log(numb.toPrecision(3));//99.0
+
+        /*
+        * String
+        * */
+        var stringValue = "Lorem ipsum dolor sit amet, consectetur adipisicing elit";
+        var positions = new Array();
+        var pos = stringValue.indexOf("e");
+        while(pos > -1){
+            positions.push(pos);
+            pos = stringValue.indexOf("e", pos + 1);
+        }
+        console.log(positions); //"3,24,32,35,52"
+
+        //字符串模式匹配
+        var text = "cat, bat, sat, fat";
+        var pattern = /.at/;
+        var matches = text.match(pattern);
+        console.log(matches.index);//0
+        console.log(matches[0]);//cat
+        console.log(pattern.lastIndex);//0
+
+        var text2 = "cat, bat, sat, fat";
+        var pos = text2.search(/at/);
+        console.log(pos);//1,即"at"在字符串中第一次出现的位置
+        var result2 = text2.replace("at", "ond");
+        console.log(result2);
+        result2 = text2.replace(/at/g, "ond");
+        console.log(result2);
+        result2 = text2.replace(/(.at)/g, "word($1)");
+        console.log(result2);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
