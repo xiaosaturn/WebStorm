@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单体内置对象</title>
+
+    <script>
+        /*
+        * Global对象
+        * */
+        var uri = "http://www.wrox.com/illegal value.htm#start";
+        console.log(encodeURI(uri));//除了空格，其他都原封不动
+        console.log(encodeURIComponent(uri));//除了字母和数字，其他都编码
+
+        var deUri = "http%3A%2F%2Fwww.wrox.com%2Fillegal%20value.htm%23start";
+        console.log(decodeURI(deUri));
+        console.log(decodeURIComponent(deUri));
+
+        /*
+        * eval()方法
+        * */
+        eval("console.log('你好')");
+
+        /*
+        * window对象
+        * */
+        var color = "red";
+        function sayColor() {
+            console.log(window.color);
+        }
+        window.sayColor();
+
+        /*
+        * Math对象
+        * */
+        console.log(Math.E);
+        console.log(Math.LN10);
+        console.log(Math.LN2);
+        console.log(Math.LOG2E);
+        console.log(Math.LOG10E);
+        console.log(Math.PI);
+        console.log(Math.SQRT1_2);
+        console.log(Math.SQRT2);
+        console.log(Math.max(3, 54, 32, 16));
+        console.log(Math.min(3, 54,32, 16));
+        var values = [1 ,2, 3, 4, 5, 6, 7, 8];
+        var max = Math.max.apply(Math, values);
+        console.log(max);
+        //向上取整
+        console.log(Math.ceil(25.9)); //26
+        console.log(Math.ceil(25.5)); //26
+        console.log(Math.ceil(25.1)); //26
+        //四舍五入取整
+        console.log(Math.round(25.9)); //26
+        console.log(Math.round(25.5)); //26
+        console.log(Math.round(25.1)); //25
+        //向下取整
+        console.log(Math.floor(25.9)); //25
+        console.log(Math.floor(25.5)); //25
+        console.log(Math.floor(25.1)); //25
+
+        /*
+        * 值 = Math.floor(Math.random() * 可能值的总数 + 第一个可能的值)
+        * */
+        var randomNum = Math.floor(Math.random() * 10 + 1);//1到10之前的随机数
+        console.log(randomNum);
+        randomNum = Math.floor(Math.random() * 9 + 2);//2到10之间的随机数
+        console.log(randomNum);
+
+        //随机数方法
+        function selectFrom(lowerValue, upperValue) {
+            var choices = upperValue - lowerValue + 1;
+            return Math.floor(Math.random() * choices + lowerValue);
+        }
+        console.log(selectFrom(3, 12));//3到12之间的随机数
+        var colors = ["red", "green", "blue", "yellow", "black", "purple", "brown"];
+        var color = colors[selectFrom(0, colors.length-1)];
+        console.log(color);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
