@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性类型</title>
+    <script>
+
+        /*
+        * 数据属性
+        * 4个描述其行为的特性
+        * [[Configurable]]：表示能否通过 delete 删除属性从而重新定义属性，能否修改属性的特性，或者能否把属性修改为访问器属性
+        * [[Enumerable]]：表示能否通过 for-in 循环返回属性
+        * [[Writable]]：表示能否修改属性的值
+        * [[Value]]：包含这个属性的数据值
+        * Object.defineProperty()方法可修改属性默认的特性
+        * */
+        var person = {};
+        Object.defineProperty(person, "name", {
+           writable: false,
+           value: "晓锟"
+        });
+        console.log(person.name);
+        person.name = "我啊";
+        console.log(person.name);
+
+        var person2 = {};
+        Object.defineProperty(person2, "name", {
+            configurable: false,  //一旦把属性定义为不可配置的，就不能再把它变回可配置的了
+            value: "晓锟"
+        });
+        console.log(person2.name);
+        delete person2.name;
+        console.log(person2.name);
+        // Object.defineProperty(person2, "name", {
+        //     configurable: true,  //一旦把属性定义为不可配置的，就不能再把它变回可配置的了，这会报错的
+        //     value: "晓锟"
+        // });
+
+
+
+        /*
+         * 访问器属性
+         * 4个描述其行为的特性
+         * [[Configurable]]：表示能否通过 delete 删除属性从而重新定义属性，能否修改属性的特性，或者能否把属性修改为访问器属性
+         * [[Enumerable]]：表示能否通过 for-in 循环返回属性
+         * [[Get]]：在读取属性时调用的函数。默认值为 undefined。
+         * [[Set]]：在写入属性时调用的函数。默认值为 undefined。
+         * 访问器属性不能直接定义，必须使用Object.defineProperty()方法来定义
+         * */
+        var book = {
+            _year: 2019,//表示只能通过对象方法访问的属性
+            edition: 1
+        };
+        Object.defineProperty(book, "year", {
+            get: function () {
+                return this._year;
+            },
+            set: function (newValue) {
+                if (newValue > 2018) {
+                    this._year = newValue;
+                    this.edition += newValue - 2018;
+                }
+            }
+        });
+        book.year = 2020;
+        console.log(book.edition);
+
+        //下面方式与book一样
+        var book2 = {};
+        Object.defineProperties(book2, {
+           _year: {
+               value: 2018
+           },
+           edition: {
+               value: 1
+            },
+           year: {
+               get: function () {
+                   return this._year;
+               },
+               set: function (newValue) {
+                   if (newValue > 2018) {
+                       this._year = newValue;
+                       this.edition += newValue - 2018;
+                   }
+               }
+            }
+        });
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
