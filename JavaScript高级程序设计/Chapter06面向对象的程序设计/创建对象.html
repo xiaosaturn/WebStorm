@@ -38,6 +38,22 @@
         var p4 = new Person("Kun", 26, "Java");
         p3.sayName();
         p4.sayName();
+        console.log(p3.constructor === Person);
+        console.log(p4.constructor === Person);
+        console.log(p3 instanceof Person);
+        console.log(p3 instanceof Object);
+
+        //构造函数当作函数
+        var p5 = new Person("暗夜猎手", 26, "薇恩");//当作构造函数使用
+        p5.sayName();
+        Person("探险家", 22, "伊泽瑞尔");//作为普通函数调用
+        window.sayName();
+        var objObj = new Object();
+        Person.call(objObj, "诡术妖姬", 22, "乐芙兰");//在另一个对象的作用域中调用
+        objObj.sayName();
+
+
+
     </script>
 </head>
 <body>
