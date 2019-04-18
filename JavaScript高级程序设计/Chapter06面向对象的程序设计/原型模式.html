@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原型模式</title>
+    <script>
+        function Person() {
+
+        }
+        Person.prototype.name = "影流之主";
+        Person.prototype.age = 29;
+        Person.prototype.job = "召唤师";
+        Person.prototype.sayName = function () {
+            console.log(this.name);
+        };
+        var p1 = new Person();
+        p1.sayName();
+        var p2 = new Person();
+        p2.sayName();
+        console.log(p1.sayName === p2.sayName); //true
+
+        console.log(Person.prototype.isPrototypeOf(p1));//true
+        console.log(Person.prototype.isPrototypeOf(p2));//true
+        console.log(Object.getPrototypeOf(p1) === Person.prototype);//true
+        console.log(Object.getPrototypeOf(p2) === Person.prototype);//true;
+
+        //实例对象有此属性hasOwnProperty才会返回true
+        console.log(p1.hasOwnProperty("name"));//false
+        p1.name = "Ni";
+        console.log(p1.hasOwnProperty("name"));
+        delete p1.name;
+        console.log(p1.hasOwnProperty("name"));
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
