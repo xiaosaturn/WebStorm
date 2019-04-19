@@ -25,11 +25,47 @@
         console.log(Object.getPrototypeOf(p2) === Person.prototype);//true;
 
         //实例对象有此属性hasOwnProperty才会返回true
+        console.log("******************************************");
         console.log(p1.hasOwnProperty("name"));//false
         p1.name = "Ni";
-        console.log(p1.hasOwnProperty("name"));
+        console.log(p1.hasOwnProperty("name"));//true
         delete p1.name;
-        console.log(p1.hasOwnProperty("name"));
+        console.log(p1.hasOwnProperty("name"));//false
+        console.log("******************************************");
+
+        //“in”操作符
+        console.log("name" in p1);//不管name是在实例对象上，还是在原型对象上，都会返回ture，除非通过.方法访问不到，才会返回false
+
+        /*
+        * true:属性存在于原型上
+        * false：属性存在于对象上
+        * */
+        function hasPrototypeProperty(object, name) {
+            return !object.hasOwnProperty(name) && (name in object);
+        }
+        p2.name = "属性在对象上";
+        console.log(hasPrototypeProperty(p2, "name"));//false
+        delete p2.name;
+        console.log(hasPrototypeProperty(p2, "name"));//true
+
+        console.log("取得对象上所有可枚举的实例属性，可使用Object.keys()");
+        console.log(Object.keys(Person.prototype));//["name", "age", "job", "sayName"]
+        console.log(Object.keys(p1));//[]
+        p1.nb = "牛B";
+        p1.oa = "哦啊";
+        console.log(Object.keys(p1));//["nb", "oa"]
+
+        console.log("取得所有实例属性，Object.getOwnPropertyNames()");
+        console.log(Object.getOwnPropertyNames(Person.prototype));//["constructor", "name", "age", "job", "sayName"]
+
+        Person.prototype = {
+            name: "九尾妖狐",
+            age: 1100,
+            job: "峡谷勇士",
+            sayName: function () {
+                console.log(this.name);
+            }
+        }
 
 
     </script>
