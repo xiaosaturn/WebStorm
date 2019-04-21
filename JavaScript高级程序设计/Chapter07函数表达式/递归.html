@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>递归</title>
+    <script>
+        function factorial(num) {
+            if (num <= 1) {
+                return 1;
+            } else {
+                // return num * factorial(num - 1);//危险，不用
+                return num * arguments.callee(num - 1);//严格模式下会出错
+            }
+        }
+        var factorial2 = (function f(num) {
+           if (num <= 1) {
+               return 1;
+           } else {
+               return num * f(num - 1);//严格和非严格都行得通
+           }
+        });
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
