@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>窗口位置</title>
+    <script>
+        var leftPos = (typeof window.screenLeft == 'number') ? window.screenLeft : window.screenX;
+        var topPos = (typeof window.screenLeft == 'number') ? window.screenTop : window.screenY;
+
+        var pageWidth = window.innerWidth;
+        var pageHeight = window.innerHeight;
+        if (typeof pageWidth != 'number') {
+            if (document.compatMode == "CSS1Compat") {
+                pageWidth = document.documentElement.clientWidth;
+                pageHeight = document.documentElement.clientHeight;
+            } els {.
+                pageWidth = document.body.clientWidth;
+                pageHeight = document.body.clientHeight;
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

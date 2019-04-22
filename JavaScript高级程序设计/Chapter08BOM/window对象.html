@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window对象</title>
+    <script>
+        /*
+        * 全局作用域
+        * */
+       var age = 29;
+       window.color = "red";
+       delete window.color;//可以删除
+       delete window.age;//无法删除
+       console.log(window.age);
+       console.log(window.color);
+
+       function sayAge() {
+           console.log(this.age);
+       }
+       console.log(window.age);
+       sayAge();
+       window.sayAge();
+    </script>
+</head>
+<iframe src="" rows="160, *" frameborder="0"></iframe>
+<body>
+
+</body>
+</html>
