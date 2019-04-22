@@ -62,10 +62,10 @@
             }
         };
         console.log(object.getNameFunc()());
-        var object2 = {
+        let object2 = {
             name: "My Object",
             getNameFunc: function () {
-                var that = this;
+                const that = this;
                 return function () {
                     return that.name;
                 };
@@ -73,6 +73,13 @@
         };
         console.log(object2.getNameFunc()());
 
+        (function() {
+            var now = new Date();
+            if (now.getMonth() == 0 && now.getDate() == 1) {
+                //1月1号新年快乐
+                alert("Happy new year!");
+            }
+        })();
 
 
     </script>
