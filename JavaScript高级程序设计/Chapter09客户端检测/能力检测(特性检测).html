@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>能力检测(特性检测)</title>
+    <script>
+        var xhr = new ActiveXObject("Mircosoft.XMLHttp");
+        function isHostMethod(object, property) {
+            var t = typeof object[property];
+            return t == 'function' || (!!(t == 'object' && object[property])) || t == 'unknown';
+        }
+        console.log(isHostMethod(xhr, 'open'));
+        console.log(isHostMethod(xhr, 'foo'));
+
+        //确定浏览器是否支持Netscape风格的插件
+        var hasNSPlugins = !!(navigator.plugins && navigator.plugins.length);
+
+        //确定浏览器是否具有DOM1级规定的能力
+        var hasDOM1 = !!(document.getElementById && document.createElement && document.getElementsByTagName);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
