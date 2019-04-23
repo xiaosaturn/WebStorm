@@ -34,6 +34,13 @@
     console.log("================================");
 </script>
 <script>
+    //给Array添加一个移除指定位置元素的方法
+    Array.prototype.remove = function(from, to) {
+        var rest = this.slice((to || from) + 1 || this.length);
+        this.length = from < 0 ? this.length + from : from;
+        return this.push.apply(this, rest);
+    };
+
     var colors = ["red", "green", "blue"];
     console.log(colors.toString());
     console.log(colors.values());
