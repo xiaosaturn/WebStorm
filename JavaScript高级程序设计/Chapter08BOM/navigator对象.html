@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>navigator对象</title>
+    <script>
+        //检测插件，IE中无效
+        function hasPlugin(name) {
+            name = name.toLocaleString();
+            for (var i=0;i<navigator.plugins.length;i++){
+                if (navigator.plugins[i].name.toLowerCase().indexOf(name) > -1) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        console.log(hasPlugin("Flash"));//检测Flash
+        console.log(hasPlugin("QuickTime"));//检测QuickTime
+        console.log(hasPlugin("pdf"));
+        
+        //检测IE中的插件
+        function hasIEPlugin(name) {
+            try {
+                new ActiveXObject(name);
+                return true;
+            } catch (ex) {
+                return false;
+            }
+        }
+        console.log(hasIEPlugin("ShockwaveFlash.ShockwaveFlash"));//检测Flash
+        console.log(hasIEPlugin("QuickTime.QuickTime"));//检测QuickTime
+        
+        
+        //检测所有浏览器中的Flash
+        function hasFlash() {
+            var result = hasPlugin("Flash");
+            if (!result) {
+                result = hasIEPlugin("ShockwaveFlash.ShockwaveFlash");
+            }
+            return result;
+        }
+        
+        //检测所有浏览器中的QuickTime
+        function hasQuickTime() {
+            var result = hasPlugin("QuickTime");
+            if (!result) {
+                result = hasIEPlugin("QuickTime.QuickTime");
+            }
+            return result;
+        }
+        console.log(hasFlash());
+        console.log(hasQuickTime());
+        
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>
