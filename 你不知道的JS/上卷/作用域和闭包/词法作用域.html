@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XKWeb</title>
+    <script src=""></script>
+
+    <style type="text/css">
+
+    </style>
+
+    <script>
+        /*
+        * eval
+        * 下面的代码只有声明为var，b才会等于str里的值，即3
+        * 如果声明为let或const，b始终等于2
+        * */
+        function foo(str, a) {
+            eval(str);
+            console.log(a, b);
+        }
+
+        const b = 2;
+        foo("const b = 3;", 1);
+
+
+        /*
+        * with
+        * */
+        var obj = {
+            a: 1,
+            b: 2,
+            c: 3
+        };
+
+        // 单调乏味的重复 "obj"
+        obj.a = 2;
+        obj.b = 3;
+        obj.c = 4;
+        console.log(obj);
+
+        // 简单的快捷方式
+        with (obj) {
+            a = 3;
+            b = 4;
+            c = 5;
+        }
+        console.log(obj);
+
+
+        function foo(obj) {
+            with (obj) {
+                a = 2;
+            }
+        }
+        let o1 = {
+            a: 3
+        };
+        let o2 = {
+            b: 3
+        };
+        foo(o1);
+        console.log(o1.a); // 2
+        foo(o2);
+        console.log(o2.a); // undefined
+        console.log(a); // 2——不好，a 被泄漏到全局作用域上了!
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

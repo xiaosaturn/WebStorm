@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XKWeb</title>
+    <script src=""></script>
+
+    <style type="text/css">
+
+    </style>
+
+    <script>
+        //赋值操作的目标是谁(LHS)，谁是赋值操作的源头(RHS)
+        /*
+         * 如果查找的目的是对变量进行赋值，那么就会使用 LHS 查询;
+         * 如果目的是获取变量的值，就会使用 RHS 查询。
+         * 赋值操作符会导致 LHS 查询。=操作符或调用函数时传入参数的操作都会导致关联作用域的赋值操作。
+         * */
+        function foo(a) {
+            let b = a;
+            return a + b;
+        }
+        let c = foo(2);
+        console.log(c);
+
+        /*
+        * 1. 找出所有的LHS查询(这里有3处!)
+             c = ..;、a = 2(隐式变量分配)、b = ..
+          2. 找出所有的RHS查询(这里有4处!)
+          foo(2..、= a;、a ..、.. b
+        * */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
