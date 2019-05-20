@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模块</title>
+    <script src=""></script>
+
+    <style type="text/css">
+
+    </style>
+
+    <script>
+        function foo() {
+            var something = "cool";
+            var another = [1, 2, 3];
+
+            function doSomething() {
+                console.log(something);
+            }
+
+            function doAnother() {
+                console.log(another.join(" ! "));
+            }
+        }
+
+        function CoolModule() {
+            var something = "cool";
+            var another = [1, 2, 3];
+
+            function doSomething() {
+                console.log(something);
+            }
+
+            function doAnother() {
+                console.log(another.join(" ! "));
+            }
+
+            return {
+                doSomething: doSomething, doAnother: doAnother
+            };
+        }
+
+        var foo = CoolModule();
+        foo.doSomething();
+        foo.doAnother();
+
+        //单例模式
+        var fooSingle = (function CoolModule() {
+            var something = "cool";
+            var another = [1, 2, 3];
+
+            function doSomething() {
+                console.log(something);
+            }
+
+            function doAnother() {
+                console.log(another.join(" ! "));
+            }
+
+            return {
+                doSomething: doSomething, doAnother: doAnother
+            };
+        })();
+        fooSingle.doSomething();
+        fooSingle.doAnother();
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
