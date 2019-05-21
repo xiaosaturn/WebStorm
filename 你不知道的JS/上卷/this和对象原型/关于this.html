@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>关于this</title>
+    <script src=""></script>
+
+    <style type="text/css">
+
+    </style>
+
+    <script>
+        function identify() {
+            return this.name.toUpperCase();
+        }
+        function speak() {
+            var greeting = "Hello, I'm " + identify.call(this);
+            console.log(greeting);
+        }
+        var me = {
+            name: "Kyle"
+        };
+        var you = {
+            name: "Reader"
+        };
+        identify.call(me);
+        identify.call(you);
+        speak.call(me);
+        speak.call(you);
+
+
+        function foo(num) {
+            console.log("foo: " + num);
+
+            //记录foo被调用的次数
+            // this.count++;   //this不指向函数自身
+            foo.count++;
+        }
+        foo.count = 0;
+        for (var i=0;i<10;i++) {
+            if (i > 5) {
+                foo(i);
+            }
+        }
+        console.log(foo.count);
+
+
+        function foo2(num) {
+            console.log("foo: " + num);
+
+            //记录foo被调用的次数
+            this.count++;
+        }
+        foo2.count = 0;
+        for (var i=0;i<10;i++) {
+            if (i > 5) {
+                // 使用 call(..) 可以确保 this 指向函数对象 foo2 本身
+                foo2.call(foo2, i);
+            }
+        }
+        console.log(foo2.count);
+
+        //this实际上是在函数调用时发生的绑定，它指向什么完全取决于函数在哪里被调用
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
