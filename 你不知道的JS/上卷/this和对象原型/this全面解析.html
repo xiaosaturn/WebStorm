@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this全面解析</title>
+    <script src=""></script>
+
+    <style type="text/css">
+
+    </style>
+
+    <script>
+        /*
+        * 1.默认绑定
+        * */
+        function foo() {
+            console.log(this.a);
+        }
+
+        var a = 3;
+        foo();//正常调用，非严格模式下默认绑定才能绑定到全局对象上
+
+        /*
+        function foo2() {
+            "use strict";
+            console.log(this.b);
+        }
+        var b = 3;
+        foo2();//Type Error，严格模式下与foo2的调用位置无关
+        */
+
+        function foo3() {
+            console.log(c);
+        }
+
+        var c = 5;
+        (function () {
+            "use strict";
+            foo3(); //5
+        })();
+    </script>
+
+    <script>
+        /*
+        * 2.隐式绑定
+        * */
+        console.log("==============隐式绑定==============");
+        function foo() {
+            console.log(this.a);
+        }
+
+        var obj = {
+            a: 2,
+            foo: foo
+        };
+        obj.foo();
+
+
+        //对象属性引用链中只有最顶层或者说最后一层会影响调用位置
+        function foo2() {
+            console.log(this.b);
+        }
+
+        var obj2 = {
+            b: 42,
+            foo2: foo2
+        };
+        var obj1 = {
+            b: 2,
+            obj2: obj2
+        };
+        obj1.obj2.foo2(); //42
+
+
+        function foo3() {
+            console.log(this.c);
+        }
+
+        var obj3 = {
+            c: 2,
+            foo3: foo3
+        };
+        var bar3 = obj3.foo3; // 函数别名!
+        var c = "oops, global"; // a 是全局对象的属性
+        bar3(); // "oops, global"
+    </script>
+    <script>
+        /*
+        * 显示绑定
+        * */
+        console.log("==============显示绑定==============");
+        function foo() {
+            console.log(this.a);
+        }
+        var obj = {
+            a: 2
+        };
+        var a = 3;
+        foo.call(obj);//通过 foo.call(..)，我们可以在调用 foo 时强制把它的 this 绑定到 obj 上。
+
+        //硬绑定
+        function foo2() {
+            console.log(this.b);
+        }
+        var obj2 = {
+            b: 5
+        };
+        var bar2 = function () {
+            foo2.call(obj2); //强制绑定到obj2，无论后面如何调用bar2
+        };
+        bar2();//2
+        setTimeout(bar2, 100);//2
+        bar2.call(window);//2
+
+        function foo3(something) {
+            console.log(this.c, something);
+        }
+        var obj3 = {
+            c: 7
+        };
+        var bar3 = function () {
+            return foo3.apply(obj3, arguments);
+        };
+        var d = bar3(3);
+        console.log(d);
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
