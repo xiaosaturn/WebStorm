@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单基础</title>
+    <script src="../Common/EventUtils.js"></script>
+
+    <style type="text/css">
+
+    </style>
+
+    <script>
+
+    </script>
+</head>
+
+<body>
+<input type="text" autofocus>;
+<input type="submit" value="Submit Form">
+<button type="submit">Submit Form</button>
+
+<br>
+<form action="submit" method="post" id="myForm">
+    <ul>
+        <li><input type="radio" name="color" value="red">Red</li>
+        <li><input type="radio" name="color" value="green">Green</li>
+        <li><input type="radio" name="color" value="blue">Blue</li>
+    </ul>
+</form>
+
+<form action="submit" id="form2">
+    <input type="text" placeholder="请输入数字">
+</form>
+
+<script>
+    var form = document.getElementById("myForm");
+    var colorFields = form.elements["color"];
+    console.log(colorFields);
+    var firstColorField = colorFields[0];
+    var firstFormField = form.elements[0];
+    console.log(firstColorField == firstFormField);
+
+    //避免多次提交表单
+    EventUtil.addHandler(form, "submit", function (event) {
+        event = EventUtil.getEvent(event);
+        var taget = EventUtil.getTarget(event);
+
+        //取得提交按钮
+        var btn = target.elements["submit-btn"];
+        btn.disabled = true;//禁用它
+    });
+
+    //页面load完成时，将焦点转移到第一个表单字段
+    //如果第一个表单字段是input，并且hidden，下面代码会导致错误
+    EventUtil.addHandler(window, "load", function (event) {
+        var element = document.forms[0].elements[0]
+        if (element.autofocus != true) {
+            element.focus();
+        }
+    });
+
+
+    var inputText = document.forms[1].elements[0];
+    EventUtil.addHandler(inputText, "focus", function (event) {
+       event = EventUtil.getEvent(event);
+       var target = EventUtil.getTarget(event);
+       if (target.style.backgroundColor != "red") {
+           target.style.backgroundColor = "yellow";
+       }
+    });
+    EventUtil.addHandler(inputText, "blur", function (event) {
+        event = EventUtil.getEvent(event);
+        var target = EventUtil.getTarget(event);
+        if (/[^\d]/.test(target.value)) {
+            target.style.backgroundColor = "red";
+        } else {
+            target.style.backgroundColor = "";
+        }
+    });
+    EventUtil.addHandler(inputText, "change", function (event) {
+       event = EventUtil.getEvent(event);
+       var target = EventUtil.getTarget(event);
+        if (/[^\d]/.test(target.value)) {
+            target.style.backgroundColor = "red";
+        } else {
+            target.style.backgroundColor = "";
+        }
+    });
+
+
+</script>
+</body>
+
+</html>
