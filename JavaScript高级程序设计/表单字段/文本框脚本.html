@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本框脚本</title>
+    <script src="../Common/EventUtils.js"></script>
+
+    <style type="text/css">
+
+    </style>
+
+    <script>
+
+    </script>
+</head>
+
+<body>
+<form action="">
+    <input type="text" size="25" maxlength="50" value="initial value">
+    <br>
+    <br>
+    <textarea name="ta" id="ta" cols="25" rows="25">initial value</textarea>
+</form>
+<script>
+    var textBox = document.forms[0].elements[0];
+    console.log(textBox.value);
+    textBox.value = "你好啊";
+
+    EventUtil.addHandler(textBox, "focus", function (event) {
+        event = EventUtil.getEvent(event);
+        var target = EventUtil.getTarget(event);
+        target.select();
+    });
+
+    //取得所选择的文本
+    function getSelectedText(tb) {
+        if (typeof tb.selectionStart == "number") {
+            return tb.value.substring(tb.selectionStart, tb.selectionEnd);
+        } else if (document.selection) {
+            //IE8及以下
+            return document.selection.createRange().text;
+        }
+    }
+
+
+    //选择部分文本
+    textBox.value = "Hello World!";
+    textBox.setSelectionRange(0, textBox.length);
+
+    //跨浏览器编程
+    function selectText(textBox, startIndex, stopIndex) {
+        if (textBox.setSelectionRange) {
+            textBox.setSelectionRange(startIndex, stopIndex);
+        } else if (textBox.createTextRange) {
+            var range = textbox.createTextRange();
+            range.collapse(true);
+            range.moveStart("character", startIndex);
+            range.moveEnd("character", stopIndex - startIndex);
+            range.select();
+        }
+        textBox.focus();
+    }
+
+    EventUtil.addHandler(textBox, "keypress", function (event) {
+       event = EventUtil.getEvent(event);
+       let char = EventUtil.getChar(event);
+       console.log(typeof char);//string
+       console.log(char);
+       if (!/\d/.test(char) && !Number(char) && !event.ctrlKey) {
+           EventUtil.preventDefault(event);
+       }
+    });
+
+    EventUtil.addHandler(textBox, "paste", function (event) {
+        event = EventUtil.getEvent(event);
+        let text = EventUtil.getClipboardText(event);
+        if (!/\d/.test(text)) { //text如果包含非数字字符，则禁止粘贴进文本框
+            EventUtil.preventDefault(event);
+        }
+    });
+
+
+
+
+</script>
+</body>
+
+</html>
