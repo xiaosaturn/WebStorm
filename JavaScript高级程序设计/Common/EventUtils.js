@@ -17,7 +17,15 @@ var EventUtil = {
         return event.target || event.srcElement;
     },
 
-    preventDefault: function() {
+    getChar: function(event){
+        if (typeof event.code == "number"){
+            return event.code;
+        } else {
+            return event.key;
+        }
+    },
+
+    preventDefault: function(event) {
         if (event.preventDefault()) {
             event.preventDefault();
         } else {
