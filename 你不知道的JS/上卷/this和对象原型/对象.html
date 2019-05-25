@@ -26,6 +26,98 @@
         * 内置对象：String/Number/Boolean/Object/Function/Array/Date/RegExp/Error
         * */
 
+        /*
+        * 基本包装类型：String、Boolean、Number
+        * 可以在以上这些字面量上直接访问属性和方法
+        * null和undefined没有构造形式，Date只有构造没有文字形式
+        * Object、Array、Function和RegExp都是对象
+        * */
+        let strPrimitive = "I am a string";
+        console.log(typeof strPrimitive); // "string"
+        console.log(strPrimitive instanceof String); // false
+        let strObject = new String("I am a string");
+        console.log(typeof strObject); // "object"
+        console.log(strObject instanceof String); // true
+        // 检查 sub-type 对象
+        console.log(Object.prototype.toString.call(strObject)); // [object String]
+
+
+        let myObj = {
+            a: 2
+        };
+        console.log(myObj.a);
+        console.log(myObj["a"]);
+
+
+        let myObj2 = {};
+        myObj2[true] = "foo";
+        myObj2[3] = "bar";
+        myObj2[myObj2] = "baz";
+        console.log(myObj2["true"]);
+        console.log(myObj2["3"]);
+        console.log(myObj2["[object Object]"]);
+
+        var myArr = ["foo", 22, "bar"];
+        myArr.baz = "baz";
+        console.log(myArr.length);//不会改变数组的长度
+        console.log(myArr.baz);
+
+        myArr["3"] = "第四个元素";//看起来像数字，数组长度会增加
+        console.log(myArr.length);
+        console.log(myArr[3]);
+
+        //属性描述符
+        console.log(Object.getOwnPropertyDescriptor(myObj, "a"));
+        Object.defineProperty(myObj, "a", {
+           value: 2,
+           writable: true,
+           enumerable: true,
+           configurable: true //只能调用一次defineProperty，后续再调用无效，修改false是单向操作
+        });
+
+        /*
+        * 将configurable设置为false后，后续无法再调用defineProperty了，并且这是一个单向操作，无法撤销，
+        * 并且可以把writeable状态由true改为false，但无法从false改为true
+        * 并且禁止删除这个属性
+        * enumerable默认是true，用户自定义的属性都是可枚举的
+        * */
+
+        //对象常量
+        let obj1 = {};
+        Object.defineProperty(obj1, "Favorite_Number", {
+            value: 36,
+            configurable: false,
+            writable: false
+        });
+
+        //禁止扩展
+        let obj2 = {
+            a: 3
+        };
+        Object.preventExtensions(obj2);
+        obj2.b = 222;
+        console.log(obj2.b);//undefined
+
+        /*
+        * 密封：Object.seal()会创建一个密封对象，调用preventExtensions并且将configurable设置为false
+        * 冻结：Object.freeze()，调用Object.seal()并且置writable为false
+        * */
+
+        //存在性
+        var existObj = {
+            a: 7
+        };
+        console.log("a" in existObj);//true
+        console.log("b" in existObj);//false
+        console.log(existObj.hasOwnProperty("a"));//true
+        console.log(existObj.hasOwnProperty("b"));//false
+
+        /*
+        * in操作符检查属性是否在对象及原型链中
+        * hasOwnProperty只会检查属性是否在对象中，不检查原型链
+        * */
+
+
 
     </script>
 </head>
