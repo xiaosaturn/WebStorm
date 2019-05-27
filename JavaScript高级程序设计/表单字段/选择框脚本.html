@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>选择框脚本</title>
+  <style type="text/css"></style>
+
+  <script>
+
+  </script>
+</head>
+
+<body>
+  <select name="location" id="selLocation" onchange="selectedOption()">
+    <option value="BJ">北京</option>
+    <option value="SH">上海</option>
+    <option value="GZ">广州</option>
+    <option value="SZ">深圳</option>
+    <option value="HZ">杭州</option>
+    <option value="">中国</option>
+    <option>澳大利亚</option>
+  </select>
+  <script>
+    let selectBox = document.getElementById("selLocation");
+    console.log(selectBox.options[0].text);//选项的文本
+    console.log(selectBox.options[0].value);//选项的值
+
+
+    function selectedOption() {
+        console.log(selectBox.options[selectBox.selectedIndex]);
+    }
+  </script>
+</body>
+
+</html>
