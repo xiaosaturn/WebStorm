@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prototype</title>
+  <style type="text/css"></style>
+
+  <script>
+    /*
+    * foo不直接存在于myObject中而是存在于原型链上层时myObject.foo = "bar"会出现的三种情况
+    * 1. 如果在[[Prototype]]链上层存在名为foo的普通数据访问属性(参见第3章)并且没有被标记为只读
+    *    (writable:false)，那就会直接在myObject中添加一个名为foo的新属性，它是屏蔽属性。
+    * 2. 如果在[[Prototype]]链上层存在foo，但是它被标记为只读(writable:false)，那么无法修改已有属性或者在
+    *    myObject上创建屏蔽属性。如果运行在严格模式下，代码会抛出一个错误。否则，这条赋值语句会被忽略。
+    *    总之，不会发生屏蔽。
+    * 3. 如果在[[Prototype]]链上层存在foo并且它是一个setter(参见第3章)，那就一定会调用这个setter。
+    *    foo不会被添加到(或者说屏蔽于)myObject，也不会重新定义foo这个setter。
+    * */
+
+
+    let anotherObject = {
+        a: 2
+    };
+    let myObject = Object.create(anotherObject);
+    console.log(myObject.a);//2
+    console.log(anotherObject.a);//2
+    console.log(myObject.hasOwnProperty("a"));//false
+    console.log(anotherObject.hasOwnProperty("a"));//true
+
+    function Foo() {
+
+    }
+    console.log(Foo.prototype.constructor === Foo);//ture
+    let a = new Foo();
+    console.log(a.constructor === Foo);//true
+
+    console.log("=====================")
+    function Foo2() {
+
+    }
+    Foo2.prototype = {
+
+    };
+    let a1 = new Foo2();
+    console.log(a1.constructor === Foo2);//false
+    console.log(a1.constructor === Object);//true
+    Object.defineProperty(Foo2.prototype, "constructor", {
+       enumerable: false,
+       writable: false,
+       configurable: false,
+       value: Foo2 //让.constructor指向Foo
+    });
+    console.log(a1.constructor === Foo2);//true
+    console.log(a1.constructor === Object);//false
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
