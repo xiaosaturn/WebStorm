@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Canvas基本用法</title>
+  <style type="text/css">
+    .canvasDraw {
+      border: 2px solid #4cae4c;
+    }
+
+  </style>
+
+  <script>
+
+  </script>
+</head>
+
+<body>
+  <canvas id="drawing" class="canvasDraw" width="500" height="500"></canvas>
+  <script>
+    let drawing = document.getElementById("drawing");
+    if (drawing.getContext) {
+        let context = drawing.getContext("2d");
+
+        //设置􏲒􏲕
+        context.shadowOffsetX = 5;
+        context.shadowOffsetY = 5;
+        context.shadowBlur = 4;
+        context.shadowColor = "rgba(0, 0, 0, 0.5)";
+
+        context.strokeStyle = "red";
+        context.fillStyle = "#0000ff";
+
+        context.fillStyle = "#f00";
+        context.fillRect(10, 10, 50, 50);
+
+        context.fillStyle = "rgba(0, 0, 255, 0.5)";
+        context.fillRect(30, 30, 50, 50);
+        context.clearRect(40, 40, 10, 10);
+
+
+        //􏰋绘制红色描边矩􏰑􏰒􏰖􏰅􏰉形
+        context.strokeStyle = "#ff0000";
+        context.strokeRect(10, 100, 50, 50);
+
+        //􏰋绘制半透明的蓝色描边矩形
+        context.strokeStyle = "rgba(0,0,255,0.5)";
+        context.strokeRect(30, 130, 50, 50);
+
+
+        context.strokeStyle = "#0f0";
+        context.beginPath();
+        context.arc(250, 250, 99, 0, 2 * Math.PI, false);
+        context.moveTo(344, 250);
+        context.arc(250, 250, 94, 0, 2 * Math.PI, false);
+        context.moveTo(250, 250);
+        context.lineTo(250, 170);
+        context.moveTo(250, 250);
+        context.lineTo(190, 250);
+        context.stroke();
+
+        //正常
+        context.font = "bold 14px Arial";
+        context.textAlign = "center";
+        context.textBaseline = "middle";
+        context.fillText("12", 250, 165);
+
+        let gradient = context.createLinearGradient(30, 30, 70, 70);
+        gradient.addColorStop(0, "white");
+        gradient.addColorStop(1, "black");
+
+    }
+  </script>
+</body>
+
+</html>
