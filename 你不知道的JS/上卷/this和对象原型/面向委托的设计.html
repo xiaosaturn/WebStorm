@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>面向委托的设计</title>
+  <style type="text/css"></style>
+
+  <script>
+    Task = {
+        setID: function (ID) {
+            this.id = ID;
+        },
+        outputID: function () {
+            console.log(this.id);
+        }
+    };
+
+    //让XYZ委托Task
+    XYZ = Object.create(Task);
+    XYZ.prepareTask = function (ID, Label) {
+        this.setID(ID);
+        this.label = Label;
+    };
+    XYZ.outputTaskDetails = function () {
+        this.outputID();
+        console.log(this.label);
+    };
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

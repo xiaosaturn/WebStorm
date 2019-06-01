@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>渐变</title>
+  <style type="text/css"></style>
+
+  <script>
+
+  </script>
+</head>
+
+<body>
+<canvas id="drawing" class="canvasDraw" width="500" height="500"></canvas>
+<script>
+    let drawing = document.getElementById("drawing");
+    let context = drawing.getContext("2d");
+    let gradient = context.createLinearGradient(30, 30, 80, 80);
+    gradient.addColorStop(0, "white");
+    gradient.addColorStop(1, "black");
+
+    // context.fillStyle = "#ff0000";
+    // context.fillRect(10, 10, 50, 50);
+    // context.fillStyle = gradient;
+    // context.fillRect(30, 30, 50, 50);
+
+    let raGradient = context.createRadialGradient(55, 55, 10, 55, 55, 30);
+    raGradient.addColorStop(0, "#fff");
+    raGradient.addColorStop(1, "#000");
+    context.fillStyle = raGradient;
+    context.fillRect(30, 30, 50, 50);
+
+
+
+</script>
+</body>
+
+</html>

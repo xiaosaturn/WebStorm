@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>（原型）继承</title>
+  <style type="text/css"></style>
+
+  <script>
+      function Foo(name) {
+          this.name = name;
+      }
+
+      Foo.prototype.myName = function () {
+          return this.name;
+      };
+
+      function Bar(name, label) {
+          Foo.call(this, name);
+          this.label = label;
+      }
+
+      //创建一个新的Bar.prototype对象并把它关联到Foo.prototype
+      Bar.prototype = Object.create(Foo.prototype);
+      Bar.prototype.myLabel = function () {
+          return this.label;
+      };
+      let a = new Bar("a", "obj a");
+      console.log(a.myName());
+      console.log(a.myLabel());
+
+      //ES6可以直接修改现有的Bar.prototype
+      Object.setPrototypeOf(Bar.prototype, Foo.prototype);
+
+      console.log(Object.getPrototypeOf(a) === Bar.prototype);//true
+      console.log(a.__proto__ === Bar.prototype);//true
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

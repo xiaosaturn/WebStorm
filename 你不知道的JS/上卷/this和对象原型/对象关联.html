@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>对象关联</title>
+  <style type="text/css"></style>
+
+  <script>
+      //Object.create(..) 会创建一个新对象(bar)并把它关联到我们指定的对象(foo)
+      let foo = {
+          something: function () {
+              console.log("Tell me something good...");
+          }
+      };
+      let bar = Object.create(foo);
+      bar.something();
+
+
+      //Object.create()的polyfill代码
+      if (!Object.create) {
+          Object.create = function (o) {
+              function F() {
+
+              }
+              F.prototype = o;
+              return new F();
+          }
+      }
+
+
+      let anotherObject = {
+          a: 7
+      };
+      let myObject = Object.create(anotherObject, {
+          b: {
+              enumerable: false,
+              writable: true,
+              configurable: false,
+              value: 3
+          },
+          c: {
+              enumerable: true,
+              writable: false,
+              configurable: false,
+              value: 4
+          }
+      });
+      console.log(myObject.hasOwnProperty("a"),
+                  myObject.hasOwnProperty("b"),
+                  myObject.hasOwnProperty("c")); //false,true,true
+      console.log(myObject.a,myObject.b,myObject.c); //7,3,4
+
+
+      //关联关系是备用
+      let anoObj = {
+          cool: function () {
+              console.log("cool");
+          }
+      };
+      let myObj = Object.create(anoObj);
+      myObj.doCool = function () {
+          this.cool();//内部委托
+      };
+      myObj.doCool();
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
