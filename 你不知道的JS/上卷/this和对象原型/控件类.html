@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>控件"类"</title>
+  <style type="text/css"></style>
+  <script src="../../../jQuery/jquery.js"></script>
+
+  <script>
+      //父类
+      function Widget(width, height) {
+          this.width = width || 50;
+          this.height = height || 50;
+          this.$elem = null;
+      }
+
+      Widget.prototype.render = function ($where) {
+          if (this.$elem) {
+              this.$elem.css({
+                  marginTop: "20px",
+                  width: this.width + "px",
+                  height: this.height + "px",
+                  display: "block"
+              }).appendTo($where);
+          }
+      };
+
+      //子类
+      function Button(width, height, label) {
+          //调用super构造函数
+          Widget.call(this, width, height);
+          this.label = label || "Default";
+          this.$elem = $("<button>").text(this.label);
+      }
+
+      Button.prototype = Object.create(Widget.prototype);
+      Button.prototype.render = function ($where) {
+          Widget.prototype.render.call(this, $where);
+          this.$elem.click(this.onClick.bind(this));
+      };
+      Button.prototype.onClick = function (evt) {
+          console.log("Button '" + this.label + "' clicked!");
+      };
+
+      $(document).ready(function () {
+          let $body = $(document.body);
+          let btn1 = new Button(125, 30, "Hello");
+          let btn2 = new Button(150, 40, "World");
+          btn1.render($body);
+          btn2.render($body);
+      });
+  </script>
+</head>
+
+<body>
+<script>
+    //ES6 class语法糖
+    class Widget2 {
+        constructor(width, height) {
+            this.width = width || 50;
+            this.height = height || 50;
+            this.$elem = null;
+        }
+
+        render($where) {
+            if (this.$elem) {
+                this.$elem.css({
+                    marginTop: "20px",
+                    width: this.width + "px",
+                    height: this.height + "px",
+                    display: "block"
+                }).appendTo($where);
+            }
+        }
+    }
+
+    class Button2 extends Widget2 {
+        constructor(width, height, label) {
+            super(width, height);
+            this.label = label || "Default";
+            this.$elem = $("<button>").text(this.label);
+        }
+        render($where) {
+            super.render($where);
+            this.$elem.click(this.onClick.bind(this));
+        }
+        onClick(evt) {
+            console.log( "Button '" + this.label + "' clicked!" );
+        }
+    }
+
+    $(document).ready(function () {
+        let $body = $(document.body);
+        let btn1 = new Button2(125, 100, "Hello");
+        let btn2 = new Button2(150, 150, "World");
+        btn1.render($body);
+        btn2.render($body);
+    });
+
+</script>
+<script>
+  let Widget3 = {
+      init: function (width, height) {
+          this.width = width || 50;
+          this.height = height || 50;
+          this.$elem = null;
+      },
+      insert: function ($where) {
+          if (this.$elem) {
+              this.$elem.css({
+                  marginTop: "20px",
+                  width: this.width + "px",
+                  height: this.height + "px",
+                  display: "block"
+              }).appendTo($where);
+          }
+      }
+  };
+  let Button3 = Object.create(Widget3);
+  Button3.setup = function (width, height, label) {
+      //委托调用
+      this.init(width, height);
+      this.label = label || "Default";
+      this.$elem = $("<button>").text(this.label);
+  };
+  Button3.build = function ($where) {
+      //委托调用
+      this.insert($where);
+      this.$elem.click(this.onClick.bind(this));
+  };
+  Button3.onClick = function (evt) {
+      console.log(evt);
+      console.log( "Button '" + this.label + "' clicked!" );
+  };
+
+  $(document).ready(function() {
+      let $body = $(document.body);
+      let btn1 = Object.create(Button3);
+      btn1.setup(125, 30, "你好" );
+      let btn2 = Object.create(Button3);
+      btn2.setup(150, 40, "对象关联方式" );
+      btn1.build($body);
+      btn2.build($body);
+  });
+
+</script>
+</body>
+
+</html>
