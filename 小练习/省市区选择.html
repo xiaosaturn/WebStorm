@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>省市区选择</title>
+  <style type="text/css">
+    ul {
+      list-style-type: none;
+      border-top: 1px solid red;
+      border-bottom: 1px solid red;
+      padding: 20px;
+    }
+
+    li {
+      border-bottom: 1px solid #ddd;
+      padding: 10px;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+
+    .level1 {
+      text-indent: 10px;
+      background-color: #3e8f3e;
+    }
+
+    .level2 {
+      background-color: #2aabd2;
+      text-indent: 20px;
+    }
+
+    .level3 {
+      text-indent: 30px;
+      background-color: #2e6da4;
+    }
+  </style>
+  <script src="../jQuery/jquery.js"></script>
+  <script>
+
+  </script>
+</head>
+
+<body>
+<ul>
+
+</ul>
+<script>
+    let pro = ["北京", "上海", "安徽"];
+    let city = ["宝山区", "闵行区", "黄浦区"];
+    let area = ["蜀山区", "包河区", "滨湖新区"];
+    function provinceFunc() {
+        let liHtml = "";
+        $.each(pro, function (index, ele) {
+            liHtml += "<li class='level1' onclick='unfoldData(this)'>" + ele + "</li>";
+        });
+        $("ul").append(liHtml);
+    }
+
+    function unfoldData(el) {
+        let liHtml = "";
+        if (el.nextElementSibling == $(".level2")[0]) {
+            if ($(".level2").length > 0) {
+                $(".level2").remove();
+            }
+            if ($(".level3").length > 0) {
+                $(".level3").remove();
+            }
+        } else {
+            if ($(".level2").length > 0) {
+                $(".level2").remove();
+            }
+            if ($(".level3").length > 0) {
+                $(".level3").remove();
+            }
+            $.each(city, function (index, ele) {
+                liHtml += "<li class='level2' onclick='unfoldDataLevel(this)'>" + ele + "</li>";
+            });
+            $(el).after(liHtml);
+        }
+    }
+
+    function unfoldDataLevel(el) {
+        let liHtml = "";
+        if (el.nextElementSibling == $(".level3")[0]) {
+            $(".level3").remove();
+        } else {
+            if ($(".level3").length > 0) {
+                $(".level3").remove();
+            }
+            $.each(area, function (index, ele) {
+                liHtml += "<li class='level3'>" + ele + "</li>";
+            });
+            $(el).after(liHtml);
+        }
+    }
+
+    provinceFunc();
+</script>
+</body>
+
+</html>
