@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>伪类选择符</title>
+  <style type="text/css">
+
+    p:empty {
+      background-color: #1b6d85;
+      border: 1px solid red;
+    }
+
+    p.unique:only-of-type {
+      color: red;
+    }
+
+    .div2 p:first-child {
+      font-weight: bold;
+    }
+    .div2 li:first-child {
+      text-transform: uppercase;
+    }
+    .div2 p:last-child {
+      font-weight: lighter;
+      color: #136;
+    }
+    .div2 li:last-child {
+      text-transform: lowercase;
+      color: #0f0;
+    }
+
+  </style>
+
+  <script>
+
+  </script>
+</head>
+
+<body>
+<p id="1"></p>
+<p id="2"> </p>
+<p id="3">
+
+</p>
+<p id="4"><!--注释--></p>
+
+<div>
+  <p class="unique">This paragraph has a 'unique' class.</p>
+  <p>This paragraph doesn't have a class at all.</p>
+</div>
+
+<div class="div2">
+  <p>These are the necessary steps:</p>
+  <ul>
+    <li>Insert key</li>
+    <li>Turn key <strong>clockwise</strong></li>
+    <li>Push accelerator</li>
+  </ul>
+  <p>Do <em>not</em> push the brake at the same time as the accelerator.</p>
+</div>
+
+</body>
+
+</html>
