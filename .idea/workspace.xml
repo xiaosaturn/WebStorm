@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7bbef039-b0c1-48ef-8d2c-43d531b74197" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0101.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0101.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0102.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0102.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0103.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0103.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0104.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0104.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0105.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0105.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0106.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0106.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/07-basic-visual-formatting/adding-box-props-inline-borders.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/07-basic-visual-formatting/adding-box-props-inline-borders.html" afterDir="false" />
+    <list default="true" id="7bbef039-b0c1-48ef-8d2c-43d531b74197" name="Default Changelist" comment="删除部分代码">
+      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0201.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0201.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0202.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0202.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0203.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0203.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0204.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0204.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0205.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0205.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0206.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0206.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0207.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0207.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0208.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0208.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0209.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0209.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0210.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0210.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0211.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0211.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0212.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0212.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0213.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0213.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0214.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0214.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0216.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0216.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0217.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0217.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0218.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0218.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,92 +32,93 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CSS权威指南/伪类选择符.html">
+        <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0208.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-26">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="142">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/07-basic-visual-formatting/adding-box-props-inline-borders.html">
+        <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0209.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+            <state relative-caret-position="192">
+              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0210.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0211.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0213.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="8" column="21" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0214.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="576">
+              <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0216.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0217.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0101.html">
+        <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0218.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+            <state relative-caret-position="219">
+              <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0102.html">
+        <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0212.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="456">
+              <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0103.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-515">
-              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0104.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0105.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0106.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/sheet2.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/sheet1.css">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -136,23 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/jQuery/jquery.html" />
-        <option value="$PROJECT_DIR$/jQuery/jquery.js" />
-        <option value="$PROJECT_DIR$/你不知道的JS/上卷/this和对象原型/控件&quot;类&quot;.html" />
-        <option value="$PROJECT_DIR$/CSS权威指南/选择符.html" />
-        <option value="$PROJECT_DIR$/你不知道的JS/上卷/this和对象原型/更简洁的设计.html" />
-        <option value="$PROJECT_DIR$/CSS权威指南/伪类选择符.html" />
-        <option value="$PROJECT_DIR$/小练习/省市区选择.html" />
-        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0623.html" />
-        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0624.html" />
-        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0625.html" />
-        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0626.html" />
-        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0627.html" />
-        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0628.html" />
-        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0629.html" />
-        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0630.html" />
-        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0631.html" />
-        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0632.html" />
         <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0633.html" />
         <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0634.html" />
         <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0635.html" />
@@ -187,6 +181,23 @@
         <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0105.html" />
         <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0106.html" />
         <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0101.html" />
+        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0202.html" />
+        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0201.html" />
+        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0203.html" />
+        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0204.html" />
+        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0205.html" />
+        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0206.html" />
+        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0209.html" />
+        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0207.html" />
+        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0208.html" />
+        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0210.html" />
+        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0212.html" />
+        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0211.html" />
+        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0213.html" />
+        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0214.html" />
+        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0216.html" />
+        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0217.html" />
+        <option value="$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0218.html" />
       </list>
     </option>
   </component>
@@ -227,7 +238,7 @@
               <item name="WebStorm" type="462c0819:PsiDirectoryNode" />
               <item name="CSS权威指南" type="462c0819:PsiDirectoryNode" />
               <item name="书籍代码" type="462c0819:PsiDirectoryNode" />
-              <item name="01-css-and-documents" type="462c0819:PsiDirectoryNode" />
+              <item name="02-selectors" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WebStorm" type="b2602c69:ProjectViewProjectNode" />
@@ -320,7 +331,7 @@
       <workItem from="1559354210016" duration="1245000" />
       <workItem from="1559529729102" duration="10336000" />
       <workItem from="1559609019939" duration="7493000" />
-      <workItem from="1559694417779" duration="8264000" />
+      <workItem from="1559694417779" duration="10229000" />
     </task>
     <task id="LOCAL-00001" summary="数据类型">
       <created>1554612303143</created>
@@ -641,13 +652,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108665000" />
+    <option name="totallyTimeSpent" value="110630000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32708585" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23639661" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -698,133 +709,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="删除部分代码" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0634.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0635.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0636.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0637.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0638.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0639.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0640.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0641.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1425">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0642.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0644.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1072">
-          <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0643.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0645.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0646.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0647.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-654">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0648.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/06-text-properties/ch0649.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-43" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/07-basic-visual-formatting/display-changing-inline-to-block.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/07-basic-visual-formatting/display-changing-list-to-inline.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/07-basic-visual-formatting/i/rulers.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -967,13 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0105.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/sheet2.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -984,20 +861,145 @@
     <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/sheet1.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0101.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0106.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="330">
+          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
           <folding>
             <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0101.html">
+    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/01-css-and-documents/css4_0105.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="22" column="11" lean-forward="true" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/checkmark.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0202.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-77">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0201.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0203.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0204.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0206.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0205.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0207.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0208.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0209.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0210.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0212.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0211.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0213.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0214.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0216.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0217.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS权威指南/书籍代码/02-selectors/css4_0218.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
         </state>
       </provider>
     </entry>
