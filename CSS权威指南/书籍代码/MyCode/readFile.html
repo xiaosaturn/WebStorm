@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>读取文件</title>
+    <script>
+        window.onload = function() {
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", "./tsconfig.json");
+            xhr.onreadystatechange = function () {
+                if(xhr.readyState === 4) {
+                    if(xhr.status === 200 || xhr.status === 0) {
+                        let jsonText = xhr.responseText;
+                        console.log(jsonText);
+                    }
+                }
+
+            };
+            xhr.send();
+        };
+    </script>
+</head>
+
+<body>
+<script>
+
+
+
+
+</script>
+</body>
+</html>
