@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>Chapter 10 Figures</title>
+    <style type="text/css">
+    </style>
+    <script>
+        /*
+        * 过约束时忽略margin-right的值
+        * */
+    </script>
+</head>
+<body>
+
+<div style="position: relative; width: 25em; border: 1px dotted;">
+    An absolutely positioned element can have its content
+    <span style="position: absolute; top: 0;left: 1em; right: 1em; width: 10em;
+ margin-left: auto; margin-right: 1em; background: silver;">shrink-wrapped</span>
+    thanks to the way positioning rules work.
+</div>
+
+<div style="position: relative; width: 25em; border: 1px dotted; margin-top: 10px;">
+    An absolutely positioned element can have its content
+    <span style="position: absolute; top: 0;left: 1em; right: 1em; width: auto;
+ margin-left: 1em; margin-right: 1em; background: blueviolet;">shrink-wrapped</span>
+    thanks to the way positioning rules work.
+</div>
+
+</body>
+</html>
